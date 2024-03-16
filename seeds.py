@@ -28,4 +28,4 @@ def seedGen():
 </html>
 '''
 # Run the site
-app.run(debug=True) # or False
+app.run(debug=True, host="0.0.0.0", port=0000) # or False. Please change port=.
