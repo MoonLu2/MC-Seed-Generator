@@ -10,4 +10,3 @@ EXPOSE 5001
 
 ENTRYPOINT ["python3", "/seeds/seeds.py"]
 
-#
