@@ -13,7 +13,10 @@ def seedGen():
 <h1>MC Seed Generator</h1>
 
 <p>Select and press Ctrl+C to Copy (Ctrl+V to Paste).</p>
+<form>
 <p>Seed: {str(seed)}</p>
+</form>
+<button class="button" type="button" onclick="">Generate New</button>
 
 <p>Good Luck Finding the Best Seed :)</p>
 
