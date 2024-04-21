@@ -25,7 +25,7 @@ function request_seed() {
   xhttp.send();
 }
 '''
-    return f'''
+    return '''
 <html>
 <body onload="request_seed();">
 
