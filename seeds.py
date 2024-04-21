@@ -11,8 +11,9 @@ def get_seed():
 @app.route('/')
 def seedGen():
     # request_seed() is a function that requests a seed on page's load and while clicking on a "Generate New" button.
-    # Line 18: Requests new seed while entering /get_seed URL, then on line 19 on load of the page function()
-    # creates an object which parses responseText. Then it creates a new seed on the <span> text line on line 34 after requesting text line with the ID "demo"
+    # Line 19: Requests new seed while entering /get_seed URL, then on line 20 on load of the page function()
+    # creates an object which parses responseText. Then it creates a new seed on the <span> text line on
+    # line 35 after requesting text line with the ID "demo".
     script = '''
 function request_seed() {
   const xhttp = new XMLHttpRequest();
