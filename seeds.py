@@ -3,9 +3,13 @@ from flask import Flask
 
 app = Flask(__name__)
 
+seed_list = []
+
 @app.route('/get_seed')
 def get_seed():
     seed = random.randint(-100000000000000000000000, 100000000000000000000000)
+    recent = seed
+    seed_list.append(recent)
     return f'{{ "seed": "{str(seed)}" }}'
 
 @app.route('/')
@@ -25,7 +29,7 @@ function request_seed() {
   xhttp.send();
 }
 '''
-    return '''
+    return f'''
 <html>
 <body onload="request_seed();">
 
@@ -41,6 +45,8 @@ function request_seed() {
   {script}
 </script>
 </html>
+
+<p>{seed_list}</p>
 '''
 
 app.run(debug=True, host="0.0.0.0", port=5001)
